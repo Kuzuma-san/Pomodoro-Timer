@@ -1,0 +1,126 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    background: #0f172a;
+    color: #e2e8f0;
+}
+.root {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+    min-height: 100vh;
+}
+
+.timer {
+    margin: 3rem 0rem 2rem 0rem;
+}
+.timer-h1 {
+    font-size: 6rem;
+    font-family: monospace;
+    font-weight: 300;
+    color: #f8fafc;
+    letter-spacing: 0.05em;
+}
+
+.control-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+    margin-bottom: 2rem;
+}
+.control-buttons button {
+    padding: 0.6rem 1.5rem;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor:  pointer;
+    font-weight: 500;
+}
+.start-button  { background: #6366f1; color: white; }
+.pause-button  { background: #1e293b; color: #e2e8f0; border: 1px solid #334155; }
+.reset-button  { background: #1e293b; color: #e2e8f0; border: 1px solid #334155; }
+
+.session-label {
+    width: 100%;
+    max-width: 400px;
+    margin-bottom: 3rem;
+}
+.session-label-input {
+    width: 100%;
+    padding: 0.6rem 1rem;
+    background: #1e293b;
+    border: 1px solid #334155;
+    border-radius: 6px;
+    color: #e2e8f0;
+    font-size: 0.95rem;
+}
+.session-label-input::placeholder {
+    color: #64748b;     /* dimmed placeholder text */
+}
+.session-label-input:focus {
+    outline: none;
+    border-color: #6366f1;   /* indigo border on focus */
+}
+
+.session-logs {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border-top: 1px solid #1e293b;  /* divider line */
+    padding-top: 1.5rem;
+    gap: 1rem;
+}
+.completed-session {
+    color: #94a3b8;         /* dimmed heading */
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 0.5rem;
+}
+.sessions {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+.session {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0.75rem 1rem;
+    background: #1e293b;
+    border-radius: 8px;
+    gap: 1rem;
+}
+.session-name-color {
+    flex: 2;                /* takes more space — name is longest */
+    display: flex;
+    gap: 0.6rem;
+    align-items: center;
+}
+.session-name {
+    font-size: 0.9rem;
+}
+.random-color {
+    background-color: red;
+    width: 0.75rem;
+    height: 0.75rem;
+    border-radius: 50%;
+}
+.session-time {
+    flex: 0 0 60px;        /* fixed width — always "25 min" */
+    font-size: 0.85rem;
+    color: #94a3b8;
+    text-align: center;
+}
+.completed-time {
+    flex: 0 0 90px;        /* fixed width — "2 minutes ago" */
+    font-size: 0.85rem;
+    color: #64748b;
+    text-align: right;
+}
