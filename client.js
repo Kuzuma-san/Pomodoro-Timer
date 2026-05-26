@@ -47,7 +47,6 @@ function pauseTimer(){
     console.log("Interval Paused!");
     if(timerState === 'paused') return;
     timerState = 'paused';
-    timerState = 'paused';
     clearInterval(intervalId);
 
     label.readOnly = false;
@@ -59,7 +58,6 @@ function startTimer() {
     timerState = 'running';
     label.readOnly = true;
 
-    timerState = 'running';
     intervalId = setInterval(decreaseTimer,1000);
     // calls the function decrease timer every 1 sec until hits 0, pause or reset
 }
@@ -142,7 +140,7 @@ async function postSession() {
         headers: {
             'Content-Type': 'application/json',
         },
-        body: JSON.stringify({label: labelValue, durationMin: timeArr[0], durationSec: timeArr[1],}),
+        body: JSON.stringify({label: labelValue, durationMin: Number(timeArr[0]), durationSec: Number(timeArr[1]),}),
     });
     return await response.json();
 }
